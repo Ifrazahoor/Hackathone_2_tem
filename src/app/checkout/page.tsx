@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-
+import Link from "next/link";
 export default function ChForm() {
     // Define refs for the input fields
     const getName = useRef<HTMLInputElement>(null);
@@ -170,12 +170,14 @@ export default function ChForm() {
                         <option value="no">No</option>
                     </select>
                 </div>
+               <Link href="./checkoutt">
                 <button
                     type="submit"
                     className="w-full bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600"
                 >
                     Submit
                 </button>
+                </Link>
             </form>
         </div>
     );

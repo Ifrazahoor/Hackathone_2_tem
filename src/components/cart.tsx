@@ -139,6 +139,7 @@ export default function ShoppingCart() {
               className="rounded-none bg-[#2A254B] px-8 hover:bg-[#2A254B]/90 transition-all duration-300 transform hover:scale-105 active:scale-95"
             >
               Go to checkout
+              
             </Button>
           </Link>
         </motion.div>

@@ -3,6 +3,16 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Search, ShoppingCart, User, Menu } from 'lucide-react'
+import { SignIn } from "@clerk/nextjs";
+import { SignUp } from '@clerk/nextjs'
+import {
+  ClerkProvider,
+  SignInButton,
+ 
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs'
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -82,7 +92,11 @@ export function Navbar(){
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <Link href="/" className="flex items-center">
-              <span className="font-serif text-2xl">Avion</span>
+            
+              <span className="font-serif text-2xl">Avion
+
+              </span>
+             
             </Link>
           </motion.div>
 
@@ -103,16 +117,21 @@ export function Navbar(){
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                   <Button variant="ghost" size="icon" className="ml-4 text-gray-400 hover:text-gray-500 transition-colors duration-200">
                     <User className="h-6 w-6" />
-                    <span className="sr-only">User account</span>
+                    <span className="sr-only">Sign In</span>
                   </Button>
                 </motion.div>
+              
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <DropdownMenuItem>
                   <Link href="./signup">SignUp</Link>
+                  <SignIn />
+                              <SignUp />
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <Link href="./login">Login</Link>
+                  <SignIn />
+                              <SignUp />
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -184,6 +203,7 @@ export function Navbar(){
                 </nav>
               </SheetContent>
             </Sheet>
+            
           </div>
         </div>
 

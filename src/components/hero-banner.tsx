@@ -63,7 +63,7 @@ export default function HeroBanner() {
           alt="Luxury homeware showcase"
           layout="fill"
           objectFit="cover"
-          priority
+         priority
           className="z-0"
         />
       </div>

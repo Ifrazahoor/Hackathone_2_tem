@@ -1,5 +1,14 @@
 "use client"
-
+import { SignIn } from "@clerk/nextjs";
+import { SignUp } from '@clerk/nextjs'
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs'
 import * as React from "react"
 import Link from "next/link"
 import { Search, ShoppingCart } from 'lucide-react'
@@ -55,6 +64,8 @@ export function Navbar2() {
             whileTap={{ scale: 0.95 }}
           >
             <Link href="/" className="font-serif text-2xl">
+            <SignIn />
+            <SignUp />
               Avion
             </Link>
           </motion.div>
@@ -77,14 +88,22 @@ export function Navbar2() {
               ))}
             </AnimatePresence>
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+           
               <Button variant="ghost" size="icon">
                 <Search className="h-5 w-5" />
               </Button>
+             
             </motion.div>
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <Link href="/cart">
+              <SignIn />
+            <SignUp />
                 <Button variant="ghost" size="icon" className="relative">
+                
+           
+           
                   <ShoppingCart className="h-5 w-5" />
+                
                   <motion.span 
                     className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-black text-xs text-white"
                     initial={{ scale: 0 }}
@@ -92,7 +111,9 @@ export function Navbar2() {
                     transition={{ type: "spring", stiffness: 500, damping: 30 }}
                   >
                     {"0"}
+                   
                   </motion.span>
+                  
                 </Button>
               </Link>
             </motion.div>
@@ -132,6 +153,8 @@ export function Navbar2() {
               <Link href="/cart">
                 <Button variant="ghost" size="icon" className="relative">
                   <ShoppingCart className="h-5 w-5" />
+                  <SignIn />
+                  <SignUp />
                   <motion.span 
                     className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-black text-xs text-white"
                     initial={{ scale: 0 }}
@@ -140,6 +163,9 @@ export function Navbar2() {
                   >
                     {"0"}
                   </motion.span>
+                  Sign In
+                  <SignIn />
+                  <SignUp />
                 </Button>
               </Link>
             </motion.div>
