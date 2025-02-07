@@ -55,7 +55,6 @@ export default function ProductPage() {
   return (
     <>
       <Navbar />
-      <Comment/>
 
       <motion.div 
         className="container mx-auto px-4 py-8"
