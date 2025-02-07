@@ -137,7 +137,7 @@ export default function ProductPage() {
             </motion.div>
           </motion.div>
         </motion.div>
-
+        <Comment/>
         <motion.div variants={containerVariants}>
           <motion.h2 className="font-clash text-2xl font-medium mb-6" variants={itemVariants}>You might also like</motion.h2>
           <motion.div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6" variants={containerVariants}>
