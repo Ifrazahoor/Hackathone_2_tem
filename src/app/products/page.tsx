@@ -133,7 +133,7 @@ export default function ProductPage() {
                 Add to cart
               </Button>
               </Link>
-              <Comment/>
+             
             </motion.div>
           </motion.div>
         </motion.div>
