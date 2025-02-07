@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-
+import Comment from "@/components/comments"
 import News from "@/components/newsletter-section"
 import { motion } from 'framer-motion'
 import Link from "next/link"
@@ -55,7 +55,7 @@ export default function ProductPage() {
   return (
     <>
       <Navbar />
-      
+      <Comment/>
 
       <motion.div 
         className="container mx-auto px-4 py-8"

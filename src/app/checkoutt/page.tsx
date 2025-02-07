@@ -76,7 +76,7 @@ function PaymentForm() {
     <form onSubmit={handleSubmit}>
       {/* Stripe's payment element (handles input fields for card details, etc.) */}
       <PaymentElement />
-      <Link href="/">
+      <Link href="./Shipping">
       <button type="submit" 
       disabled={!stripe || isProcessing}>
         {isProcessing ? "Processing..." : "Pay Now"} {/* Show dynamic button text */}
